@@ -1,0 +1,251 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2010 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,german]{moderncv}
+
+% \usepackage{enumitem}
+
+% moderncv themes
+% \moderncvtheme[blue]{casual}                 % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+\moderncvtheme[green]{classic}                % idem
+% \moderncvstyle{classic}
+% \moderncvcolor{orange}
+
+% character encoding
+\usepackage[utf8]{inputenc}                   % replace by the encoding you are using
+
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}						% if you want to change the width of the column with the dates
+
+\usepackage{hyperref}
+
+\usepackage{xcolor}
+\usepackage[loadonly]{enumitem}
+
+% \AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}}  % only for the classic theme, if you want to change the width of your name placeholder (to leave more space for your address details
+%\AtBeginDocument{\recomputelengths}                     % required when changes are made to page layout lengths
+
+% personal data
+\firstname{Martin}
+\familyname{\mbox{Knoller Stocker}}
+\title{Software Developer}               % optional, remove the line if not wanted
+\address{Bergstrasse 15}{8800 Thalwil}    % optional, remove the line if not wanted
+\mobile{079 264 70 58}                    % optional, remove the line if not wanted
+\phone{044 450 81 39}                      % optional, remove the line if not wanted
+% \fax{fax (optional)}                          % optional, remove the line if not wanted
+\email{martin.knoller@gmail.com}                      % optional, remove the line if not wanted
+% \homepage{http://mjava.ch}                % optional, remove the line if not wanted
+\extrainfo{Date of Birth 01.07.1976} % optional, remove the line if not wanted
+\photo[64pt]{avatar-knm}                         % '64pt' is the height the picture must be resized to and 'picture' is the name of the picture file; optional, remove the line if not wanted
+% \photo[64pt]{martin-portrait}                         % '64pt' is the height the picture must be resized to and 'picture' is the name of the picture file; optional, remove the line if not wanted
+% \quote{Some quote (optional)}                 % optional, remove the line if not wanted
+
+% to show numerical labels in the bibliography; only useful if you make citations in your resume
+\makeatletter
+\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+\makeatother
+
+\setlist [itemize,1]{label=\scriptsize\color{blue}{$\circ$}} 
+% \renewcommand{\labelitemi}{\scriptsize\color{green}{$\circ$}} 
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+
+%\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+\maketitle
+
+\section{Education}
+\cventry{2007--2008}{Bachelor of Science}{Fachhoschschule Nordwestschweiz (FHNW)}{Brugg/Windisch}{\textit{Bachelor of Science in Computer Sciene of Distributed Software Systems}}{}  % arguments 3 to 6 can be left empty
+\cventry{2005--2006}{Student}{ETH Zürich}{}{\textit{}}{Study of Computational Science}
+\cventry{2002--2004}{Mathematics Undergraduate}{University of Zürich}{}{\textit{Undergraduate (1. Vordiplom)}}
+{Study of Mathematics as major subject, Information Technologies as a minor.}
+\cventry{1997--2001}{Graduation}{KME Zürich}{}{\textit{University-Entrance Diploma}}
+{Graduation school while working part time.}
+\cventry{1993--1996}{Apprenticeship}{Winterthur-Versicherungen GA Bülach}{Bülach}{\textit{Apprenticeship}}
+{Apprenticeship in a commercial insurance company}
+
+\section{Bachelor thesis}
+\cvline{Title}{\emph{Integration of intelligent RFID-Tags in logistic systems}}
+\cvline{Supervisors}{Prof. Dr. Carlo Nicola, University of Applied Sciences Northwestern Switzerland, Institute of Mobile and Distributed Systems}
+\cvline{Abstract}
+{\small Since 2008 a new RFID-Tag system in the width of 2.45GHz from SIEMENS can not just be identified but 
+localized with mobile hot spot accesspoints. Also writing information to the RFID-Tags is possible.
+We tested throughput and scalability and designed and implemented a prototype of an end user application}
+
+\section{Experience}
+\subsection{Vocational}
+\cventry{2008--present}{Software Developer}{IMIS AG}{Zürich}{}{Senior Developer, Web-Applications, mostly WebShops with Tapestry 4.1 and Playframework with connections to various ERP-Systems (SAP (via ISA or JCO), Navision, Performis, CRHtrade etc.). Designing Import-Systems from PIM (ASIM, Stibo, Tradcom)
+\newline{}%
+Detailed accomplishments:%
+\begin{itemize}%
+\item Replaced legacy deployment strategy with a custom maven 2 plugin.
+\item Serving as an expert examiner for apprentice exams.
+\item Migrationg SCM from Subversion to git
+\item leading internal workshops for 
+\begin{itemize}
+\item Unit Testing 
+\item Software Quality
+\item Maven2
+\end{itemize}
+\item Design and Implementing various interfaces from the web-application to third-party systems (ERP)
+\item Design runtime and import infrastructure with docker (www.docker.io)
+\item Technical Lead in the development group
+\item Architectural Design
+\item Support of Junior-Developers
+\item Conducting job interviews and coding assessments
+\item Maintenance/Bugfixing/Enhancements of existing projects
+\end{itemize}
+dkdfkka
+}
+\cventry{2006--2008}{Freelancer}{}{Zürich}{}{Creating, developping, maintaining and hosting of websites/cms.\newline
+{}Creation of an online comic-shop.}
+\cventry{2005--2006}{Assistant}{ETH Zürich}{Zürich}{}{Assistant 
+\begin{itemize}%
+\item Prof. R. Hiptmair, D-Math \begin{itemize}%
+\item Working on paper for lecture \emph{Numerical Mathematic for Computational Science} in \LaTeX
+\item Scripts in Perl, \LaTeX and Bash for statistics.
+\end{itemize}
+\item Prof. W. van Gunsteren, IGC \newline Working on lecture papers.
+\end{itemize}}
+\cventry{2003--2004}{Assistant, Tutor}{University of Zürich}{Zürich}{}
+{Part time employee\newline{}Teaching java to beginners}
+
+\subsection{Miscellaneous}
+\cventry{2004}{Call-Agent}{DIMAZ AG}{Zürich}{}{Customer care on french/german}
+\cventry{2001--2002}{Clerk}{Zentralstelle für Lohnnachzahlungen (ZLBG)}{Zürich}{}{Clerk}
+\cventry{1997--2001}{Employee}{Swissport Ag}{Zürich Kloten}{Airport Zürich}{Part time job during graduation}
+
+\newpage
+\section{Accomplishments}
+\subsection{Certificates}
+\cvline{2013}{www.coursera.org: Computing for Data Analysis, introduction to R \tiny{with distinction}{}}
+\cvline{2012}{www.coursera.org: Functional Programming Principles in Scala \tiny{with distinction}{}}
+\cvline{2006}{Sun Certified Java Programmer \tiny{4.0}{}}
+\subsection{Challenges}
+\cvline{2007}{Winning the Elca Scripting Challenge, Ticket for Jazoon 07}
+\subsection{Private Projects}
+\cvline{2014}{Plugin for Intellij IDEA: \href{http://plugins.jetbrains.com/plugin/7375?pr=idea}{\underline{Tapestry 4.1 support}}, \tiny{currently 287 downloads on 2016}{}}
+\subsection{Children \tiny{(yes, they are accomplishments!)}}
+\cvline{1.10.2001}{Marvin}{}
+\cvline{16.11.2003}{Andreina}{}
+\cvline{19.8.2008}{Lynn}{}
+
+\section{Languages}
+\cvlanguage{English}{Fluent}{}
+\cvlanguage{German}{First Language}{}
+\cvlanguage{French}{Fluent}{}
+\cvlanguage{Spanish}{Fluent}{}
+\cvlanguage{Italian}{Basic knowledge}{}
+
+
+\section{Interests}
+\cvline{archery}{traditional longbow}
+\cvline{geocaching}{when nerds go outside ;)}
+\cvline{go}{ancient asian board game}
+\cvline{swimming}{freestyle}
+\cvline{reading}{\small mostly fantasy novels}
+
+
+\newpage
+\section{Computer skills}
+\subsection{Languages}
+% \setlength{\arrayrulewidth}{0.25pt}
+% \cvline{Languages}%
+\setlength{\tabcolsep}{12pt}
+{
+\begin{tabular}{l*{4}{c}}
+& very good & good & medium & basic \\
+Java & $ \surd $ & & & \\
+Scala & $ \surd $ & & & \\
+C/C++ & & & & $\surd$ \\
+Groovy & & $\surd$ & &  \\
+PHP & & & & $\surd$ \\
+R & & & $\surd$ &  \\
+Perl & & & $\surd$ &  \\
+Ruby & & & & $\surd$ \\
+Javascript & & $\surd$ & & \\
+Bash & $\surd$ & & &  \\
+XSLT (1.0,2.0) & $\surd$ & & &  \\
+STX & $\surd$ & & &  \\
+\end{tabular}
+}{}
+
+\subsection{Development-Tools \& Technologies}
+% \setlength{\arrayrulewidth}{0.25pt}
+% \cvline{Tools \& Technologies}%
+{
+\begin{tabular}{l*{4}{c}}
+          & very good & good & medium & basic \\
+IntelliJ IDEA & $ \surd $ & & & \\
+Eclipse &  & $\surd$& &  \\
+Maven2 &  $\surd$ & & & \\
+Spring Framework &  $\surd$ & & & \\
+JUnit/TestNG & $\surd$ & & &  \\
+Swing/AWT/SWT & & & $\surd$ &  \\
+Playframework (v 2.x)& $ \surd $ & & & \\
+Tapestry (v 4.1) & $ \surd $ & & & \\
+Apache Lucene Search & $ \surd $ & & & \\
+Elastic Search & & $ \surd $ & & \\
+JQuery & $ \surd $ & & & \\
+RequireJS & & $ \surd $ & & \\
+AngularJS & & $ \surd $ & & \\
+Ember/BackboneJS & & & $ \surd $ & \\
+UnderscoreJS & & & $ \surd $ & \\
+Ant & & $\surd$& &  \\
+Antlr & & & & $\surd$ \\
+git & $\surd$ & & &  \\
+Subversion & $\surd$ & & &  \\
+UML & & $\surd$& &  \\
+vi & $\surd$ &  & & \\
+Bash & $\surd$ & & &  \\
+\LaTeX & $\surd$ & & & \\
+\end{tabular}
+}{}
+
+
+% \cvcomputer{Languages 1}{XXX, YYY, ZZZ}{category 4}{XXX, YYY, ZZZ}
+% \cvcomputer{category 2}{XXX, YYY, ZZZ}{category 5}{XXX, YYY, ZZZ}
+% \cvcomputer{category 3}{XXX, YYY, ZZZ}{category 6}{XXX, YYY, ZZZ}
+
+
+% \section{Extra 1}
+% \cvlistitem{Item 1}
+% \cvlistitem{Item 2}
+% \cvlistitem[+]{Item 3}            % optional other symbol
+
+% \renewcommand{\listitemsymbol}{-} % change the symbol for lists
+
+% \section{Extra 2}
+% \cvlistdoubleitem{Item 1}{Item 4}
+% \cvlistdoubleitem{Item 2}{Item 5 \cite{book1}}
+% \cvlistdoubleitem{Item 3}{}
+
+% Publications from a BibTeX file without multibib\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% for BibTeX numerical labels
+% \nocite{*}
+% \bibliographystyle{plain}
+% \bibliography{publications}       % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}   % 'publications' is the name of a BibTeX file
+
+\end{document}
+
+
+%% end of file `martin-cv.tex'.
