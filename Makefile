@@ -1,6 +1,6 @@
 # -----------------------------------------------------------------------------
 # BUILD
-# dependencies: moderncv, pdflatex
+# dependencies: moderncv, pdflatex, texlive-fonts-extra
 # -----------------------------------------------------------------------------
 .PHONY: all
 all: pdf open
