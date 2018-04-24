@@ -7,7 +7,7 @@ all: pdf open
 
 .PHONY: pdf
 pdf:
-	@pdflatex martin-cv.tex
+	@docker run --rm -v `pwd`:/data nilrecurring/latex-gfonts pdflatex martin-cv.tex
 	@echo cv was produced: open martin-cv.pdf
 
 .PHONY: open
