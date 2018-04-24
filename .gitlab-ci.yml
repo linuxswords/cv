@@ -1,0 +1,9 @@
+image: nilrecurring/latex-gfonts:latest
+
+compile_cv:
+    stage: build
+    script:
+        - pdflatex martin-cv.tex
+    artifacts:
+        paths:
+            - martin-cv.pdf
