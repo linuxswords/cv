@@ -1,4 +1,4 @@
-image: nilrecurring/latex-gfonts:latest
+image: registry.gitlab.com/linuxswords/cv
 
 compile_cv:
     stage: build
