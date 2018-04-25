@@ -13,3 +13,7 @@ pdf:
 .PHONY: open
 open:
 	@xdg-open martin-cv.pdf
+
+.PHONY: clean
+clean:
+	@rm -f *.out *.log *.pdf *.aux
