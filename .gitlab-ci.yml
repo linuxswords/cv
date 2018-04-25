@@ -3,7 +3,7 @@ image: registry.gitlab.com/linuxswords/cv
 compile_cv:
     stage: build
     script:
-        - pdflatex martin-cv.tex
+        - pdflatex -jobname martinknoller-cv martin-cv.tex
     artifacts:
         paths:
-            - martin-cv.pdf
+            - martinknoller-cv.pdf
