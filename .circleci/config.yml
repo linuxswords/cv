@@ -1,6 +1,10 @@
+defaults: &defaults
+  working_directory: /tmp
+
 version: 2
 jobs:
  build:
+    <<: *defaults
    docker:
      - image: nilrecurring/latex-gfonts:latest
    steps:
@@ -10,12 +14,20 @@ jobs:
      - run: |
          pdflatex -jobname martinknoller-cv martin-cv.tex 
      - run: |
-         cp martinknoller-cv.pdf /tmp/cv
+         mkdir -p workspace
+     - run: |
+         cp martinknoller-cv.pdf workspace/martinknoller-cv.pdf
+     - persist_to_workspace:
+         root: workspace
+         paths:
+          - martinknoller-cv.pdf
  upload_aws:
+  <<: *defaults
   docker:
     - image: xueshanf/awscli
-  working_directory: /tmp/cv
   steps:
+    - attach_workspace: 
+      at: /tmp/workspace
     - run: 
         name: Deploy to S3
         command: aws s3 sync martinknoller-cv.pdf s3:// --delete
