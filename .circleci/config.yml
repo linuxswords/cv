@@ -1,0 +1,30 @@
+version: 2
+jobs:
+ build:
+   docker:
+     - image: nilrecurring/latex-gfonts:latest
+   steps:
+     - checkout
+     # start proprietary DB using private Docker image
+     # with credentials stored in the UI
+     - run: |
+         pdflatex -jobname martinknoller-cv martin-cv.tex 
+     - run: |
+         cp martinknoller-cv.pdf /tmp/cv
+ upload_aws:
+  docker:
+    - image: xueshanf/awscli
+  working_directory: /tmp/cv
+  steps:
+    - run: 
+        name: Deploy to S3
+        command: aws s3 sync martinknoller-cv.pdf s3:// --delete
+
+workflows:
+  version: 2
+  build_and_publish:
+    jobs:
+      - build
+      - upload_aws:
+          requires:
+            - build
