@@ -26,7 +26,7 @@ jobs:
     - image: xueshanf/awscli
   steps:
     - attach_workspace: 
-      at: /tmp/workspace
+        at: /tmp/workspace
     - run: 
         name: Deploy to S3
         command: aws s3 sync martinknoller-cv.pdf s3:// --delete
