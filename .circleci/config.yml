@@ -33,7 +33,7 @@ jobs:
     - run: ls /tmp/workspace
     - run: 
         name: Deploy to S3
-        command: aws s3 sync /tmp/workspace/martinknoller-cv.pdf s3://$CV_BUCKET --delete
+        command: aws s3 sync /tmp/workspace s3://$CV_BUCKET --delete
 
 workflows:
   version: 2
