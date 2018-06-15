@@ -13,7 +13,7 @@ jobs:
      - run: |
          pdflatex -jobname martinknoller-cv martin-cv.tex 
      - run: |
-         mkdir -p workspace
+         mkdir -p /tmp/workspace
      - run: |
          cp martinknoller-cv.pdf workspace/martinknoller-cv.pdf
      - persist_to_workspace:
