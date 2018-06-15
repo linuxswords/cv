@@ -15,7 +15,7 @@ jobs:
      - run: |
          mkdir -p /tmp/workspace
      - run: |
-         cp martinknoller-cv.pdf workspace/martinknoller-cv.pdf
+         cp martinknoller-cv.pdf /tmp/workspace/martinknoller-cv.pdf
      - persist_to_workspace:
          root: workspace
          paths:
