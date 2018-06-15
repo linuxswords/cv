@@ -17,7 +17,7 @@ jobs:
      - run: |
          cp martinknoller-cv.pdf /tmp/workspace/martinknoller-cv.pdf
      - persist_to_workspace:
-         root: workspace
+         root: /tmp/workspace
          paths:
           - martinknoller-cv.pdf
  upload_aws:
