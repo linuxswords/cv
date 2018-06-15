@@ -29,7 +29,7 @@ jobs:
         at: /tmp/workspace
     - run: 
         name: Deploy to S3
-        command: aws s3 sync /tmp/workspace s3://$CV_BUCKET --delete
+        command: aws s3 sync /tmp/workspace s3://$CV_BUCKET --delete --acl public-read
 
 workflows:
   version: 2
