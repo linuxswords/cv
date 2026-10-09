@@ -12,7 +12,7 @@ pdf:
 
 .PHONY: open
 open:
-	@xdg-open martinknoller-cv.pdf
+	@xdg-open `readlink -f martinknoller-cv.pdf`
 
 .PHONY: clean
 clean:
