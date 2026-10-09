@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/linuxswords/cv.svg?style=svg)](https://circleci.com/gh/linuxswords/cv)
+[![Build and release CV](https://github.com/linuxswords/cv/actions/workflows/release.yml/badge.svg)](https://github.com/linuxswords/cv/actions/workflows/release.yml)
 
 # Curriculum Vitae (CV)
 My personal cv in LaTeX
@@ -16,4 +16,4 @@ Look at the [Makefile](Makefile) for more commands
 
 ## CI
 
-Circle CI builds and pushes that pdf to a public [AWS S3 bucket](https://s3.eu-central-1.amazonaws.com/martinknoller-cv/martinknoller-cv.pdf).
+A GitHub Actions workflow builds the CV on every push to `main`.
