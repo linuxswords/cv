@@ -4,6 +4,8 @@
 
 My personal cv in LaTeX
 
+[Download the latest version (PDF)](https://github.com/linuxswords/cv/releases/latest/download/martinknoller-cv.pdf)
+
 ## Prerequisites
 
 - docker
